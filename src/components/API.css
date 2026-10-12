@@ -1,0 +1,140 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.app {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.upload-section {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.upload-section h2 {
+  margin-bottom: 20px;
+}
+
+.upload-btn,
+.change-btn {
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.upload-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.change-btn {
+  background: #16a34a;
+  color: white;
+  display: block;
+  margin: 15px auto 0;
+}
+
+.upload-btn:hover,
+.change-btn:hover {
+  opacity: 0.85;
+}
+
+.preview {
+  margin-top: 25px;
+}
+
+.preview img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid #ddd;
+}
+
+.users-section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.users-section h2 {
+  margin-bottom: 20px;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+tr:hover {
+  background: #f5f5f5;
+}
+
+.message {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.error {
+  text-align: center;
+  color: red;
+  margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .upload-section,
+  .users-section {
+    padding: 18px;
+  }
+
+  .preview img {
+    width: 180px;
+    height: 180px;
+  }
+}

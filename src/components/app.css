@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #202938;
+}
+
+/* Main Page */
+.container {
+  min-height: 100vh;
+  padding: 35px 7% 60px;
+
+  background:
+    radial-gradient(
+      circle at 0% 35%,
+      rgba(115, 92, 255, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 95% 85%,
+      rgba(170, 110, 255, 0.13),
+      transparent 25%
+    ),
+    #ffffff;
+}
+
+/* Heading */
+.container h1 {
+  text-align: center;
+
+  margin: 0 0 52px 0;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  color: #673de6;
+}
+
+/* Cards Grid */
+.user-container {
+  width: 100%;
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 32px;
+}
+
+/* Child Card */
+.card {
+  position: relative;
+
+  min-height: 350px;
+
+  padding: 30px;
+
+  background: white;
+
+  border-radius: 22px;
+
+  border-top: 5px solid #7044e8;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 12px 30px rgba(93, 67, 220, 0.12),
+    0 4px 12px rgba(0, 0, 0, 0.05);
+
+  transition: 0.3s ease;
+}
+
+/* Card Hover */
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 20px 40px rgba(93, 67, 220, 0.18);
+}
+
+/* Decorative Circle */
+.card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 135px;
+  height: 135px;
+
+  top: -68px;
+  right: -68px;
+
+  border-radius: 50%;
+
+  background: rgba(103, 61, 230, 0.07);
+}
+
+/* Name */
+.card h2 {
+  position: relative;
+
+  margin: 0 0 32px 0;
+
+  font-size: 27px;
+
+  color: #4c3bb5;
+
+  z-index: 1;
+}
+
+/* Underline */
+.card h2::after {
+  content: "";
+
+  display: block;
+
+  width: 48px;
+  height: 4px;
+
+  margin-top: 8px;
+
+  border-radius: 10px;
+
+  background: linear-gradient(
+    90deg,
+    #673de6,
+    #9b5de5
+  );
+}
+
+/* Details */
+.card p {
+  position: relative;
+
+  margin: 0 0 30px 0;
+
+  font-size: 16px;
+
+  line-height: 1.5;
+
+  color: #3f4857;
+
+  z-index: 1;
+}
+
+/* Bold Labels */
+.card p strong {
+  color: #202938;
+  font-weight: 700;
+}
+
+/* Email */
+.card p.email {
+  padding: 11px 10px;
+
+  margin-left: -2px;
+  margin-right: -2px;
+
+  border-radius: 10px;
+
+  background: #f1efff;
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+  .container {
+    padding: 30px 5% 50px;
+  }
+
+  .user-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .container h1 {
+    font-size: 38px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+
+  .container {
+    padding: 25px 20px 40px;
+  }
+
+  .container h1 {
+    font-size: 32px;
+    margin-bottom: 35px;
+  }
+
+  .user-container {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .card {
+    min-height: auto;
+    padding: 25px;
+  }
+
+  .card h2 {
+    font-size: 24px;
+  }
+
+  .card p {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+  .card h2 {
+  color: #000000 !important;
+  font-weight: 700;
+  opacity: 1 !important;
+}
+}
